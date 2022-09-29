@@ -2,25 +2,14 @@ package SecondWeek.CarsType;
 
 import SecondWeek.Cars;
 
-public class Suv implements Cars {
+public class Suv extends Cars {
+    private int monthlyRental;
 
-    public String carColor() {
-        return "red";
+    public int getMonthlyRental() {
+        return monthlyRental+ (100 / getAge() * 30);
     }
 
-    //Yaşına bağlı olarak değişkenlik gösteren günlük kiralama
-    public int dailyRental() {
-        int age = 2;
-        return 350 + (100 / age);
+    public void setMonthlyRental(int monthlyRental) {
+        this.monthlyRental = monthlyRental ;
     }
-
-    public int luggageCapacity() {
-        return 500;
-    }
-
-    //Aracın Yaşına bağlı olarak değişkenlik gösteren aylık kiralama
-    public int monthlyRental() {
-        return dailyRental() * 30;
-    }
-
 }

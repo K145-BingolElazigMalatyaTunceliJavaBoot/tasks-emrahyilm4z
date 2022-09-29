@@ -2,21 +2,15 @@ package SecondWeek.CarsType;
 
 import SecondWeek.Cars;
 
-public class Sedan implements Cars {
+public class Sedan extends Cars {
+    private int monthlyRental;
 
-    public String carColor() {
-        return "gray";
+    public int getMonthlyRental() {
+        return monthlyRental;
     }
 
-    public int dailyRental() {
-        return 300;
+    public void setMonthlyRental(int monthlyRental) {
+        this.monthlyRental = monthlyRental;
     }
 
-    public int luggageCapacity() {
-        return 586;
-    }
-
-    public int monthlyRental() {
-        return dailyRental() * 30;
-    }
 }
