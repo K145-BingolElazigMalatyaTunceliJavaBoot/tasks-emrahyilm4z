@@ -5,7 +5,7 @@ public class Cars {
     private int luggageCapacity;
     private int dailyRental;
     private String color;
-
+    private int monthlyRental;
     private int age;
 
     public int getAge() {
@@ -17,6 +17,13 @@ public class Cars {
     }
 
 
+    public int getMonthlyRental() {
+        return monthlyRental;
+    }
+
+    public void setMonthlyRental(int monthlyRental) {
+        this.monthlyRental = monthlyRental;
+    }
 
     public int getLuggageCapacity() {
         return luggageCapacity;
