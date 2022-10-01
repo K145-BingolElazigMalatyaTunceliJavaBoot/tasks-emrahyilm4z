@@ -3,11 +3,15 @@ package SecondWeek;
 import SecondWeek.CarsType.Hatchback;
 import SecondWeek.CarsType.Sedan;
 import SecondWeek.CarsType.Suv;
+import SecondWeek.Customer.Citizen;
+import SecondWeek.Customer.Company;
+import SecondWeek.Customer.Customer;
+import SecondWeek.Service.RentACarService;
 
 
-public class RentCar {
+public class Main {
     public static void main(String[] args) {
-
+        RentACarService rentACarService = new RentACarService();
         Hatchback hatchback = new Hatchback();
         Suv suv = new Suv();
         Sedan sedan = new Sedan();
@@ -33,11 +37,12 @@ public class RentCar {
         suv.setLuggageCapacity(600);
         suv.setMonthlyRental(9000);
 
-        Customer citizen = new Customer(false);
-        citizen.rentCar(hatchback,suv,sedan);
+        Customer citizen = new Citizen();
+        citizen.setIsim("Jhon");
+        rentACarService.rentACar(citizen);
 
-        Customer company = new Customer(true);
-        company.rentCar(hatchback,suv,sedan);
-
+        Customer company = new Company();
+        company.setIsim("Trendyol");
+        rentACarService.rentACar(company);
     }
 }

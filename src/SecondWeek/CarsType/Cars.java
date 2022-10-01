@@ -1,6 +1,6 @@
-package SecondWeek;
+package SecondWeek.CarsType;
 
-public class Cars {
+public abstract class Cars {
 
     private int luggageCapacity;
     private int dailyRental;

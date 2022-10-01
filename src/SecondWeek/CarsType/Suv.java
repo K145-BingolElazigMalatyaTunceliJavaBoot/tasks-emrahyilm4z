@@ -1,7 +1,5 @@
 package SecondWeek.CarsType;
 
-import SecondWeek.Cars;
-
 public class Suv extends Cars {
     @Override
     public int getMonthlyRental() {

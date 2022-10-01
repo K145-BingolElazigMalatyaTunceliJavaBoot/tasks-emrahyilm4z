@@ -10,12 +10,17 @@
     ┃ ┗ ToplamAsalSayi.java
     ┣ SecondWeek
     ┃ ┣ CarsType
+    ┃ ┃ ┣ Cars.java
     ┃ ┃ ┣ Hatchback.java
     ┃ ┃ ┣ Sedan.java
     ┃ ┃ ┗ Suv.java
-    ┃ ┣ Cars.java
-    ┃ ┣ Customer.java
-    ┃ ┗ RentCar.java
+    ┃ ┣ Customer
+    ┃ ┃ ┣ Citizen.java
+    ┃ ┃ ┣ Company.java
+    ┃ ┃ ┗ Customer.java
+    ┃ ┣ Service
+    ┃ ┃ ┗ RentACarService.java
+    ┃ ┗ Main.java
     ┗ Main.java
 
 </details>
