@@ -13,11 +13,9 @@
     ┃ ┃ ┣ Hatchback.java
     ┃ ┃ ┣ Sedan.java
     ┃ ┃ ┗ Suv.java
-    ┃ ┣ Customer
-    ┃ ┃ ┣ Citizen.java
-    ┃ ┃ ┗ Company.java
     ┃ ┣ Cars.java
-    ┃ ┗ MainCars.java
+    ┃ ┣ Customer.java
+    ┃ ┗ RentCar.java
     ┗ Main.java
 
 </details>
