@@ -1,6 +1,8 @@
-package ThirdWeek.Greengrocer;
+package ThirdWeek.Greengrocer.FruitManager;
 
-public class FruitManager {
+import ThirdWeek.Greengrocer.Fruit;
+
+public class BuyFruitManager {
     public void buyFruit(Fruit fruit, int kg) throws Exception {
         if (fruit.getKg() < kg) {
             throw new Exception("Malesef elmizde " + kg + " kilogram " + fruit.getFruitName() + " yok");
@@ -8,4 +10,5 @@ public class FruitManager {
             System.out.println(kg + " kg " + fruit.getFruitName() + " alındı");
         }
     }
+
 }

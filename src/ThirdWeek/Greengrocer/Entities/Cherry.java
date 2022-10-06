@@ -1,10 +1,9 @@
-package ThirdWeek.Greengrocer.Fruits;
+package ThirdWeek.Greengrocer.Entities;
 
 import ThirdWeek.Greengrocer.Fruit;
 
 public class Cherry extends Fruit {
-    public Cherry(int kg) {
-        setKg(kg);
+    public Cherry() {
         setFruitName("Kiraz");
     }
 }
