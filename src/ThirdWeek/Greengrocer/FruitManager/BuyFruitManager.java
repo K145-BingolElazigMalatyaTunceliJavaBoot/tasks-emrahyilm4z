@@ -1,6 +1,6 @@
 package ThirdWeek.Greengrocer.FruitManager;
 
-import ThirdWeek.Greengrocer.Fruit;
+import ThirdWeek.Greengrocer.Entities.Fruit;
 
 public class BuyFruitManager {
     public void buyFruit(Fruit fruit, int kg) throws Exception {

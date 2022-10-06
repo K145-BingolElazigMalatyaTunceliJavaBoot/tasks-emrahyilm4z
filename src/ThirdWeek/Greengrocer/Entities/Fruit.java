@@ -1,4 +1,4 @@
-package ThirdWeek.Greengrocer;
+package ThirdWeek.Greengrocer.Entities;
 
 public class Fruit {
     private String fruitName;
