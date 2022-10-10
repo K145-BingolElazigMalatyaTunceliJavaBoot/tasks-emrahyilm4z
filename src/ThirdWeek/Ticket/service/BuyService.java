@@ -22,6 +22,6 @@ public class BuyService {
                 System.err.println("Seçtiğiniz koltuk bu uçakta yok. Olan koltuklar satın alındı.");
             }
         }
-        company.setSeats(companySeats);
+        company.setSeats(companySeats) ;
     }
 }
