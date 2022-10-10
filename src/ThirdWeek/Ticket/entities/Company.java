@@ -1,22 +1,13 @@
-package ThirdWeek.Ticket.Entities;
+package ThirdWeek.Ticket.entities;
 
 import java.util.List;
 
-public class FlyCompany {
+public class Company {
     private String name;
     private List seats;
     private int seatLengt;
     private int businessSeat;
     private int economicSeat;
-
-    private boolean abroadFood;
-    public boolean isAbroadFood() {
-        return abroadFood;
-    }
-
-    public void setAbroadFood(boolean abroadFood) {
-        this.abroadFood = abroadFood;
-    }
 
 
 
