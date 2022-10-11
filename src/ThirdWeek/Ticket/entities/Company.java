@@ -4,10 +4,11 @@ import java.util.List;
 
 public class Company {
     private String name;
-    private List seats;
+    private List<String> seats;
     private int seatLengt;
     private int businessSeat;
     private int economicSeat;
+
 
 
 
@@ -43,11 +44,11 @@ public class Company {
         this.name = name;
     }
 
-    public List getSeats() {
+    public List<String> getSeats() {
         return seats;
     }
 
-    public void setSeats(List seats) {
+    public void setSeats(List<String> seats) {
         this.seats = seats;
     }
 
