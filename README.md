@@ -21,6 +21,30 @@
     ┃ ┣ Service
     ┃ ┃ ┗ RentACarService.java
     ┃ ┗ Main.java
+    ┣ ThirdWeek
+    ┃ ┣ Greengrocer
+    ┃ ┃ ┣ Entities
+    ┃ ┃ ┃ ┣ Apple.java
+    ┃ ┃ ┃ ┣ Cherry.java
+    ┃ ┃ ┃ ┣ Fruit.java
+    ┃ ┃ ┃ ┗ Pear.java
+    ┃ ┃ ┣ FruitManager
+    ┃ ┃ ┃ ┗ GreengrocerManager.java
+    ┃ ┃ ┗ Main.java
+    ┃ ┗ Ticket
+    ┃ ┃ ┣ core
+    ┃ ┃ ┃ ┗ food
+    ┃ ┃ ┃ ┃ ┗ Food.java
+    ┃ ┃ ┣ entities
+    ┃ ┃ ┃ ┣ Company.java
+    ┃ ┃ ┃ ┣ Pegasus.java
+    ┃ ┃ ┃ ┣ Person.java
+    ┃ ┃ ┃ ┣ SunExpress.java
+    ┃ ┃ ┃ ┗ Thy.java
+    ┃ ┃ ┣ service
+    ┃ ┃ ┃ ┣ BuyService.java
+    ┃ ┃ ┃ ┗ SeatService.java
+    ┃ ┃ ┗ Main.java
     ┗ Main.java
 
 </details>
