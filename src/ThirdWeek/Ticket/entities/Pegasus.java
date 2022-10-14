@@ -8,9 +8,9 @@ public class Pegasus extends Company implements Food {
     public Pegasus(int seatLength) {
         this.setName("Pegasus");
         this.setSeatLengt(seatLength);
-        this.setSeats(SeatService.seatService(getSeatLengt()));
-        this.setBusinessSeat(2000);
-        this.setEconomicSeat(1000);
+        this.setBusiness(2000);
+        this.setEconomic(1000);
+        this.setSeats(SeatService.seatService(getSeatLengt(), this.getBusiness(), this.getEconomic()));
     }
 
     @Override

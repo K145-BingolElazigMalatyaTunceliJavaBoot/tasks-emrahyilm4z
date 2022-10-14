@@ -1,32 +1,33 @@
 package ThirdWeek.Ticket.entities;
 
 import java.util.List;
+import java.util.Map;
 
 public class Company {
     private String name;
-    private List<String> seats;
+    private Map<String, Integer> seats;
     private int seatLengt;
-    private int businessSeat;
-    private int economicSeat;
 
+    private int business;
 
+    private int economic;
 
-
-    public int getBusinessSeat() {
-        return businessSeat;
+    public int getBusiness() {
+        return business;
     }
 
-    public void setBusinessSeat(int businessSeat) {
-        this.businessSeat = businessSeat;
+    public void setBusiness(int business) {
+        this.business = business;
     }
 
-    public int getEconomicSeat() {
-        return economicSeat;
+    public int getEconomic() {
+        return economic;
     }
 
-    public void setEconomicSeat(int economicSeat) {
-        this.economicSeat = economicSeat;
+    public void setEconomic(int economic) {
+        this.economic = economic;
     }
+
 
     public int getSeatLengt() {
         return seatLengt;
@@ -44,13 +45,11 @@ public class Company {
         this.name = name;
     }
 
-    public List<String> getSeats() {
+    public Map<String, Integer> getSeats() {
         return seats;
     }
 
-    public void setSeats(List<String> seats) {
+    public void setSeats(Map<String, Integer> seats) {
         this.seats = seats;
     }
-
-
 }

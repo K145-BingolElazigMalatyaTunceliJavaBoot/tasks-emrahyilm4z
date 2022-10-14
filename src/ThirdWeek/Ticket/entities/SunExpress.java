@@ -7,9 +7,9 @@ public class SunExpress extends Company implements Food {
     public SunExpress(int seatLength) {
         this.setName("Sun Express");
         this.setSeatLengt(seatLength);
-        this.setSeats(SeatService.seatService(getSeatLengt()));
-        this.setBusinessSeat(2150);
-        this.setEconomicSeat(1100);
+        this.setBusiness(2150);
+        this.setEconomic(1100);
+        this.setSeats(SeatService.seatService(getSeatLengt(), this.getBusiness(),this.getEconomic()));
     }
 
     @Override

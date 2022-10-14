@@ -1,11 +1,13 @@
 package ThirdWeek.Ticket.entities;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Person {
     private String nameSurname;
-    private List<String> seats = new ArrayList<String>();
+    private Map<String ,Integer> seats = new HashMap<String,Integer>();
     private int ticketPrice;
 
     public Person(String nameSurname) {
@@ -20,11 +22,11 @@ public class Person {
         this.nameSurname = nameSurname;
     }
 
-    public List<String> getSeats() {
+    public Map<String, Integer> getSeats() {
         return seats;
     }
 
-    public void setSeats(List<String> seats) {
+    public void setSeats(Map<String, Integer> seats) {
         this.seats = seats;
     }
 

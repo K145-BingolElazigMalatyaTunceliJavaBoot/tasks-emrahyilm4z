@@ -7,9 +7,9 @@ public class Thy extends Company implements Food {
     public Thy(int seatLength) {
         this.setName("Türk Hava Yolları");
         this.setSeatLengt(seatLength);
-        this.setSeats(SeatService.seatService(getSeatLengt()));
-        this.setBusinessSeat(2300);
-        this.setEconomicSeat(1200);
+        this.setBusiness(2300);
+        this.setEconomic(1200);
+        this.setSeats(SeatService.seatService(getSeatLengt(), this.getBusiness(),this.getEconomic()));
     }
 
     @Override

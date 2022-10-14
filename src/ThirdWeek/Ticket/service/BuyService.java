@@ -5,6 +5,7 @@ import ThirdWeek.Ticket.entities.Person;
 
 
 import java.util.List;
+import java.util.Map;
 
 public class BuyService {
     public void emptySeats(Company company) {
@@ -13,23 +14,24 @@ public class BuyService {
 
 
     public void buySeats(Person person, Company company, List<String> seats, boolean abroad) {
-        List<String> companySeats = company.getSeats();
+        Map<String, Integer> companySeats = company.getSeats();
         for (String element : seats) {
-            if (!companySeats.contains(element)) {
+            if (!companySeats.containsKey(element)) {
                 System.err.println("Seçtiğiniz koltuk bu uçakta yok. Olan koltuklar satın alındı.");
             } else {
-                List<String> strings = person.getSeats();
+                Map<String, Integer> strings = person.getSeats();
+                int abroadPrice = abroad ? companySeats.get(element) * 2 : companySeats.get(element);
+                strings.put(element + company.getName(), abroadPrice);
                 companySeats.remove(element);
-                strings.add(element + company.getName());
                 person.setSeats(strings);
-                priceSeat(person, company,element.startsWith("1"), abroad);
+                priceSeat(person, abroad);
             }
         }
         company.setSeats(companySeats);
     }
 
-    private static void priceSeat(Person person, Company company,  boolean business, boolean abroad) {
-        int price = business ? company.getBusinessSeat() : company.getEconomicSeat();
-        person.setTicketPrice(person.getTicketPrice() + (abroad ? price*2 : price));
+    private static void priceSeat(Person person, boolean abroad) {
+        int sum = person.getSeats().values().stream().reduce(0, Integer::sum);
+        person.setTicketPrice(sum);
     }
 }
