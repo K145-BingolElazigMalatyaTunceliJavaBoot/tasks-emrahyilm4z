@@ -17,7 +17,7 @@ public class SeatService {
         }
         for (int i = 1; i <= seatLength; i++) {
             for (int j = 0; j < seatLetter.length; j++) {
-                seats.put(seatLetter[j] + i, economic);
+                seats.put(seatLetter[j] + i, economic );
             }
         }
         return seats;
