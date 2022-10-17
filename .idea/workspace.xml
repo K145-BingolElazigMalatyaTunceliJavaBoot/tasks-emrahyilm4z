@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3a0f6a8-f485-4421-9a26-3952500c8574" name="Changes" comment="first week homework completed">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/K145-KodluyoruzJavaBootCamp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/Harflendirme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/SayiTahmini.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/TamBolenSayilar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/ToplamAsalSayi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Cars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Hatchback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Sedan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Suv.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Citizen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Service/RentACarService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Cherry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Fruit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Pear.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/FruitManager/GreengrocerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/core/food/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Pegasus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/SunExpress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Thy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/service/BuyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/service/SeatService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,45 +53,44 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2F0LopULHDygXjh8ZpgBWJ5VylH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
+  <component name="ProjectId" id="2GHXqAkk3U7QUwEl2iSuXI2NqBQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/emrah/Belgeler/JAVA/Seneryolar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TodolistApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="todolist" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.emrah.todolist.TodolistApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3a0f6a8-f485-4421-9a26-3952500c8574" name="Changes" comment="" />
-      <created>1663624234613</created>
+      <changelist id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="" />
+      <created>1666046670463</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663624234613</updated>
-      <workItem from="1665834221422" duration="34000" />
-      <workItem from="1665834638210" duration="82000" />
-      <workItem from="1665919145395" duration="1173000" />
+      <updated>1666046670463</updated>
+      <workItem from="1666046673037" duration="74000" />
     </task>
-    <task id="LOCAL-00001" summary="first week homework completed">
-      <created>1663631337367</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663631337367</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,9 +106,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="first week homework completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="first week homework completed" />
   </component>
 </project>

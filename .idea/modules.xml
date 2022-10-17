@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/K145-KodluyoruzJavaBootCamp.iml" filepath="$PROJECT_DIR$/K145-KodluyoruzJavaBootCamp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tasks-emrahyilm4z.iml" filepath="$PROJECT_DIR$/.idea/tasks-emrahyilm4z.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todolist/todolist/todolist.iml" filepath="$PROJECT_DIR$/todolist/todolist/todolist.iml" />
     </modules>
   </component>
 </project>
