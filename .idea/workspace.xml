@@ -4,43 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/K145-KodluyoruzJavaBootCamp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/Harflendirme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/SayiTahmini.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/TamBolenSayilar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirinciHafta/ToplamAsalSayi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Cars.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Hatchback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Sedan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/CarsType/Suv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Citizen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Company.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Customer/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SecondWeek/Service/RentACarService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Apple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Cherry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Fruit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Entities/Pear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/FruitManager/GreengrocerManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Greengrocer/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/core/food/Food.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Company.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Pegasus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/SunExpress.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/entities/Thy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/service/BuyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThirdWeek/Ticket/service/SeatService.java" beforeDir="false" />
+    <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="Start fourth week">
+      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/TodolistApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/TodolistApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +34,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "ToolWindowChanges.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "086bec6f119951c2a07358deb5991a3e"
   }
 }]]></component>
   <component name="RunManager">
@@ -90,7 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1666046670463</updated>
       <workItem from="1666046673037" duration="74000" />
+      <workItem from="1666046762315" duration="479000" />
     </task>
+    <task id="LOCAL-00001" summary="Start fourth week">
+      <created>1666047001705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666047001705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start fourth week" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start fourth week" />
   </component>
 </project>
