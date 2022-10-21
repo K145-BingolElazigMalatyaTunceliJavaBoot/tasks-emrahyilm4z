@@ -1,8 +1,8 @@
 package com.emrah.todolist.controller;
 
-import com.emrah.todolist.dto.TodoListDto;
+import com.emrah.todolist.dto.TodoAddRequestDto;
+import com.emrah.todolist.dto.TodoResponseDto;
 import com.emrah.todolist.entity.TodoList;
-import com.emrah.todolist.entity.User;
 import com.emrah.todolist.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,37 +22,37 @@ public class TodoController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<TodoListDto> add(@RequestBody TodoList todoList) {
-        return new ResponseEntity<TodoListDto>(this.todoService.add(todoList).getBody(), HttpStatus.OK);
+    public ResponseEntity<TodoAddRequestDto> add(@RequestBody TodoList todoList) {
+        return new ResponseEntity<TodoAddRequestDto>(todoService.add(todoList).getBody(), HttpStatus.OK);
     }
 
     @GetMapping("/week")
-    public ResponseEntity<List<TodoListDto>> getWeek() {
-        return new ResponseEntity<>(this.todoService.getWeek().getBody(), HttpStatus.OK);
+    public ResponseEntity<List<TodoResponseDto>> getWeek() {
+        return new ResponseEntity<>(todoService.getWeek(), HttpStatus.OK);
     }
 
     @GetMapping("/month")
-    public ResponseEntity<List<TodoListDto>> getMonth() {
-        return new ResponseEntity<>(this.todoService.getMonth().getBody(), HttpStatus.OK);
+    public ResponseEntity<List<TodoResponseDto>> getMonth() {
+        return new ResponseEntity<>(todoService.getMonth(), HttpStatus.OK);
     }
 
     @GetMapping("/day")
-    public ResponseEntity<List<TodoListDto>> getDay() {
-        return new ResponseEntity<>(this.todoService.getDay().getBody(), HttpStatus.OK);
+    public ResponseEntity<List<TodoResponseDto>> getDay() {
+        return new ResponseEntity<>(todoService.getDay(), HttpStatus.OK);
     }
 
     @GetMapping("/notDone")
-    public ResponseEntity<List<TodoListDto>> getNotDone() {
-        return new ResponseEntity<>(this.todoService.getNotDone().getBody(), HttpStatus.OK);
+    public ResponseEntity<List<TodoResponseDto>> getNotDone() {
+        return new ResponseEntity<>(todoService.getNotDone(), HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteTodo")
-    public ResponseEntity<TodoList> delete(@RequestParam(name = "id") int id) {
-        return new ResponseEntity<>(this.todoService.deleteTodo(id).getStatusCode());
+    public ResponseEntity<Boolean> delete(@RequestParam(name = "id") int id) {
+        return todoService.deleteTodo(id);
     }
     @PostMapping("/done")
-    public ResponseEntity<TodoListDto> done(@RequestParam (name = "id") int id){
-        return new ResponseEntity<>(this.todoService.done(id).getBody(),HttpStatus.OK);
+    public ResponseEntity<TodoResponseDto> done(@RequestParam (name = "id") int id){
+        return new ResponseEntity<>(todoService.done(id).getBody(),HttpStatus.OK);
     }
 
 }

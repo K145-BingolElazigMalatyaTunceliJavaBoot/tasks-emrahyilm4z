@@ -1,6 +1,7 @@
 package com.emrah.todolist.controller;
 
-import com.emrah.todolist.dto.UserDto;
+import com.emrah.todolist.dto.UserRequestDto;
+import com.emrah.todolist.dto.UserResponseDto;
 import com.emrah.todolist.entity.User;
 import com.emrah.todolist.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +22,17 @@ public class UsersController {
     }
 
     @GetMapping("getAll")
-    public ResponseEntity<List<User>> getAll() {
-        return new ResponseEntity<List<User>>(this.userService.getAll().getBody(), HttpStatus.OK);
+    public ResponseEntity<List<UserResponseDto>> getAll() {
+        return new ResponseEntity<List<UserResponseDto>>(userService.getAll().getBody(), HttpStatus.OK);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<UserDto> add(@RequestBody User user) {
-        return new ResponseEntity<UserDto>(this.userService.add(user).getBody(), HttpStatus.OK);
+    public ResponseEntity<UserRequestDto> add(@RequestBody User user) {
+        return new ResponseEntity<UserRequestDto>(userService.add(user).getBody(), HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteUser")
-    public ResponseEntity<UserDto> delete(@RequestParam(name = "id") int id) {
-        return new ResponseEntity<>(this.userService.deleteUser(id).getStatusCode());
+    public ResponseEntity<Boolean> delete(@RequestParam(name = "id") int id) {
+        return userService.deleteUser(id);
     }
 }

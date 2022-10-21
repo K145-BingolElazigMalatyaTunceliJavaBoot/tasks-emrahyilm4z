@@ -5,32 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="Complate fourth week">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_10_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoListDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/UserDtoConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/DbSequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/SequenceGeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/UserResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/TodoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/TodoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoAddRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/UserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/UserDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/UserDtoConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/UserService.java" afterDir="false" />
     </list>
@@ -119,7 +102,8 @@
       <workItem from="1666217940806" duration="3688000" />
       <workItem from="1666252580178" duration="15330000" />
       <workItem from="1666289355617" duration="7513000" />
-      <workItem from="1666362148666" duration="3095000" />
+      <workItem from="1666362148666" duration="4085000" />
+      <workItem from="1666369900315" duration="10638000" />
     </task>
     <task id="LOCAL-00001" summary="Start fourth week">
       <created>1666047001705</created>
@@ -142,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666274261709</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complate fourth week">
+      <created>1666365595083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666365595083</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

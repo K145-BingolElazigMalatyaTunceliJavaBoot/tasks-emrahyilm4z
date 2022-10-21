@@ -1,8 +1,8 @@
 package com.emrah.todolist.service;
 
 import com.emrah.todolist.dataAccess.TodoListDao;
-import com.emrah.todolist.dto.TodoListDto;
-import com.emrah.todolist.dto.UserDto;
+import com.emrah.todolist.dto.TodoAddRequestDto;
+import com.emrah.todolist.dto.TodoResponseDto;
 import com.emrah.todolist.dto.converter.TodoListDtoConverter;
 import com.emrah.todolist.entity.TodoList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,25 +27,25 @@ public class TodoService {
         this.todoListDao = todoListDao;
     }
 
-    public ResponseEntity<List<TodoListDto>> getAll() {
-        List<TodoList> todoLists = this.todoListDao.findAll();
-        List<TodoListDto> todoListDtos = new ArrayList<>();
+    public ResponseEntity<List<TodoResponseDto>> getAll() {
+        List<TodoList> todoLists = todoListDao.findAll();
+        List<TodoResponseDto> todoResponseDtos = new ArrayList<>();
         for (TodoList item : todoLists) {
-            TodoListDto todoListDto = TodoListDtoConverter.convert(item);
-            todoListDtos.add(todoListDto);
+            TodoResponseDto todoResponseDto = TodoListDtoConverter.convertTodoResponseDto(item);
+            todoResponseDtos.add(todoResponseDto);
         }
-        return new ResponseEntity<>(todoListDtos, HttpStatus.OK);
+        return new ResponseEntity<>(todoResponseDtos, HttpStatus.OK);
     }
 
-    public ResponseEntity<TodoListDto> add(TodoList todoList) {
+    public ResponseEntity<TodoAddRequestDto> add(TodoList todoList) {
         todoList.setId(sequenceGeneratorService.getSequenceNumber(todoList.SEQUENCE_NAME));
-        this.todoListDao.save(todoList);
-        TodoListDto todoListDto = TodoListDtoConverter.convert(todoList);
-        return new ResponseEntity<TodoListDto>(todoListDto, HttpStatus.OK);
+        todoListDao.save(todoList);
+        TodoAddRequestDto todoAddRequestDto = TodoListDtoConverter.convertTodoAddRequestDto(todoList);
+        return new ResponseEntity<TodoAddRequestDto>(todoAddRequestDto, HttpStatus.OK);
     }
 
-    public ResponseEntity<List<TodoListDto>> getWeek() {
-        List<TodoListDto> todoLists = new ArrayList<>();
+    public List<TodoResponseDto> getWeek() {
+        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int weekOfYear = localDate.get(ChronoField.ALIGNED_WEEK_OF_YEAR);
         getAll().getBody().forEach((item) -> {
@@ -53,11 +53,11 @@ public class TodoService {
                 todoLists.add(item);
             }
         });
-        return new ResponseEntity<>(todoLists, HttpStatus.OK);
+        return todoLists;
     }
 
-    public ResponseEntity<List<TodoListDto>> getMonth() {
-        List<TodoListDto> todoLists = new ArrayList<>();
+    public List<TodoResponseDto> getMonth() {
+        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int monthOfYear = localDate.get(ChronoField.MONTH_OF_YEAR);
         getAll().getBody().forEach((item) -> {
@@ -65,11 +65,11 @@ public class TodoService {
                 todoLists.add(item);
             }
         });
-        return new ResponseEntity<>(todoLists, HttpStatus.OK);
+        return todoLists;
     }
 
-    public ResponseEntity<List<TodoListDto>> getDay() {
-        List<TodoListDto> todoLists = new ArrayList<>();
+    public List<TodoResponseDto> getDay() {
+        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int dayOfYear = localDate.get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR);
         getAll().getBody().forEach((item) -> {
@@ -77,34 +77,34 @@ public class TodoService {
                 todoLists.add(item);
             }
         });
-        return new ResponseEntity<>(todoLists, HttpStatus.OK);
+        return todoLists;
     }
 
-    public ResponseEntity<List<TodoListDto>> getNotDone() {
-        List<TodoListDto> todoLists = new ArrayList<>();
+    public List<TodoResponseDto> getNotDone() {
+        List<TodoResponseDto> todoLists = new ArrayList<>();
         getAll().getBody().forEach((item) -> {
             if (!item.isDone()) {
                 todoLists.add(item);
             }
         });
-        return new ResponseEntity<>(todoLists, HttpStatus.OK);
+        return todoLists;
     }
 
-    public ResponseEntity<TodoList> deleteTodo(int id) {
-        this.todoListDao.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Boolean> deleteTodo(int id) {
+        todoListDao.deleteById(id);
+        return new ResponseEntity<>(!todoListDao.existsById(id),HttpStatus.OK);
     }
 
-    public ResponseEntity<TodoListDto> done(int id) {
-        List<TodoList> todoLists = this.todoListDao.findAll();
-        TodoListDto todoListDto = null;
+    public ResponseEntity<TodoResponseDto> done(int id) {
+        List<TodoList> todoLists = todoListDao.findAll();
+        TodoResponseDto todoResponseDto = null;
         for (TodoList item : todoLists) {
             if (item.getId() == id) {
                 item.setDone(!item.isDone());
-                todoListDto = TodoListDtoConverter.convert(item);
-                this.todoListDao.save(item);
+                todoResponseDto = TodoListDtoConverter.convertTodoResponseDto(item);
+                todoListDao.save(item);
             }
         }
-        return new ResponseEntity<>(todoListDto, HttpStatus.OK);
+        return new ResponseEntity<>(todoResponseDto, HttpStatus.OK);
     }
 }

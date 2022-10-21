@@ -1,7 +1,8 @@
 package com.emrah.todolist.service;
 
 import com.emrah.todolist.dataAccess.UserDao;
-import com.emrah.todolist.dto.UserDto;
+import com.emrah.todolist.dto.UserRequestDto;
+import com.emrah.todolist.dto.UserResponseDto;
 import com.emrah.todolist.dto.converter.UserDtoConverter;
 import com.emrah.todolist.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,19 +25,25 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    public ResponseEntity<UserDto> add(User user) {
+    public ResponseEntity<UserRequestDto> add(User user) {
         user.setId(sequenceGeneratorService.getSequenceNumber(user.SEQUENCE_NAME));
         this.userDao.save(user);
-        UserDto userDto = UserDtoConverter.convert(user);
-        return new ResponseEntity<UserDto>(userDto, HttpStatus.OK);
+        UserRequestDto userResponseDto = UserDtoConverter.convertUserRequestDto(user);
+        return new ResponseEntity<UserRequestDto>(userResponseDto, HttpStatus.OK);
     }
 
-    public ResponseEntity<List<User>> getAll() {
-        return new ResponseEntity<>(this.userDao.findAll(), HttpStatus.OK);
+    public ResponseEntity<List<UserResponseDto>> getAll() {
+        List<User> users = userDao.findAll();
+        List<UserResponseDto> userResponseDtos = new ArrayList<>();
+        for (User user : users) {
+            userResponseDtos.add(UserDtoConverter.convertUserResponseDto(user));
+        }
+
+        return new ResponseEntity<>(userResponseDtos, HttpStatus.OK);
     }
 
-    public ResponseEntity<UserDto> deleteUser(int id) {
-        this.userDao.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Boolean> deleteUser(int id) {
+        userDao.deleteById(id);
+        return new ResponseEntity<>(!userDao.existsById(id),HttpStatus.OK);
     }
 }

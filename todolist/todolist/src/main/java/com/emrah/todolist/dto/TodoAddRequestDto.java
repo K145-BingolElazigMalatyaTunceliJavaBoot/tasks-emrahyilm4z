@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TodoListDto {
+public class TodoAddRequestDto {
     private int author;
     private String description;
     private LocalDate startTime;
