@@ -1,5 +1,6 @@
 package com.emrah.todolist.controller;
 
+import com.emrah.todolist.dto.UserDto;
 import com.emrah.todolist.entity.User;
 import com.emrah.todolist.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +26,12 @@ public class UsersController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<User> add(@RequestBody User user) {
-        return new ResponseEntity<User>(this.userService.add(user).getBody(), HttpStatus.OK);
+    public ResponseEntity<UserDto> add(@RequestBody User user) {
+        return new ResponseEntity<UserDto>(this.userService.add(user).getBody(), HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteUser")
-    public ResponseEntity<User> delete(@RequestParam(name = "id") int id) {
+    public ResponseEntity<UserDto> delete(@RequestParam(name = "id") int id) {
         return new ResponseEntity<>(this.userService.deleteUser(id).getStatusCode());
     }
 }
