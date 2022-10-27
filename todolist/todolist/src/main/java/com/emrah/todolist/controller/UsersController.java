@@ -1,6 +1,5 @@
 package com.emrah.todolist.controller;
 
-import com.emrah.todolist.dto.UserRequestDto;
 import com.emrah.todolist.dto.UserResponseDto;
 import com.emrah.todolist.entity.User;
 import com.emrah.todolist.service.UserService;
@@ -23,16 +22,21 @@ public class UsersController {
 
     @GetMapping("getAll")
     public ResponseEntity<List<UserResponseDto>> getAll() {
-        return new ResponseEntity<List<UserResponseDto>>(userService.getAll().getBody(), HttpStatus.OK);
+        return new ResponseEntity<List<UserResponseDto>>(userService.getAll(), HttpStatus.OK);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<UserRequestDto> add(@RequestBody User user) {
-        return new ResponseEntity<UserRequestDto>(userService.add(user).getBody(), HttpStatus.OK);
+    public ResponseEntity<UserResponseDto> add(@RequestBody User user) {
+        return new ResponseEntity<UserResponseDto>(userService.add(user).getBody(), HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteUser")
-    public ResponseEntity<Boolean> delete(@RequestParam(name = "id") int id) {
+    public Boolean delete(@RequestParam(name = "id") int id) {
         return userService.deleteUser(id);
+    }
+
+    @PutMapping("/updateUser")
+    public ResponseEntity<UserResponseDto> update(@RequestParam (name = "id") int id, @RequestParam (name = "name")String name){
+        return new ResponseEntity<>(userService.update(id,name),HttpStatus.OK);
     }
 }

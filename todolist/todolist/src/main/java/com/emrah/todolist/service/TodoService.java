@@ -1,10 +1,13 @@
 package com.emrah.todolist.service;
 
 import com.emrah.todolist.dataAccess.TodoListDao;
-import com.emrah.todolist.dto.TodoAddRequestDto;
-import com.emrah.todolist.dto.TodoResponseDto;
+import com.emrah.todolist.dto.todo.TodoAddRequestDto;
+import com.emrah.todolist.dto.todo.TodoResponseDto;
 import com.emrah.todolist.dto.converter.TodoListDtoConverter;
+import com.emrah.todolist.dto.todo.TodoUpdateResponseDto;
 import com.emrah.todolist.entity.TodoList;
+import com.emrah.todolist.exceptions.UserNotFoundId;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +20,11 @@ import java.util.List;
 
 @Service
 public class TodoService {
-    private final TodoListDao todoListDao;
+    private TodoListDao todoListDao;
 
-    private SequenceGeneratorService sequenceGeneratorService;
+    @Autowired
+    private ModelMapper modelMapper;
+    private final SequenceGeneratorService sequenceGeneratorService;
 
     @Autowired
     public TodoService(TodoListDao todoListDao, SequenceGeneratorService sequenceGeneratorService) {
@@ -27,28 +32,22 @@ public class TodoService {
         this.todoListDao = todoListDao;
     }
 
-    public ResponseEntity<List<TodoResponseDto>> getAll() {
-        List<TodoList> todoLists = todoListDao.findAll();
-        List<TodoResponseDto> todoResponseDtos = new ArrayList<>();
-        for (TodoList item : todoLists) {
-            TodoResponseDto todoResponseDto = TodoListDtoConverter.convertTodoResponseDto(item);
-            todoResponseDtos.add(todoResponseDto);
-        }
-        return new ResponseEntity<>(todoResponseDtos, HttpStatus.OK);
+    public List<TodoResponseDto> getAll() {
+        return todoListDao.findAll().stream().map(TodoListDtoConverter::convertTodoResponseDto).toList();
     }
 
-    public ResponseEntity<TodoAddRequestDto> add(TodoList todoList) {
-        todoList.setId(sequenceGeneratorService.getSequenceNumber(todoList.SEQUENCE_NAME));
+    public TodoAddRequestDto add(TodoList todoList) {
+        todoList.setId(sequenceGeneratorService.getSequenceNumber(TodoList.SEQUENCE_NAME));
         todoListDao.save(todoList);
         TodoAddRequestDto todoAddRequestDto = TodoListDtoConverter.convertTodoAddRequestDto(todoList);
-        return new ResponseEntity<TodoAddRequestDto>(todoAddRequestDto, HttpStatus.OK);
+        return todoAddRequestDto;
     }
 
     public List<TodoResponseDto> getWeek() {
         List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int weekOfYear = localDate.get(ChronoField.ALIGNED_WEEK_OF_YEAR);
-        getAll().getBody().forEach((item) -> {
+        getAll().forEach((item) -> {
             if (item.getStartTime().get(ChronoField.ALIGNED_WEEK_OF_YEAR) == weekOfYear) {
                 todoLists.add(item);
             }
@@ -60,7 +59,7 @@ public class TodoService {
         List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int monthOfYear = localDate.get(ChronoField.MONTH_OF_YEAR);
-        getAll().getBody().forEach((item) -> {
+        getAll().forEach((item) -> {
             if (item.getStartTime().get(ChronoField.MONTH_OF_YEAR) == monthOfYear) {
                 todoLists.add(item);
             }
@@ -72,7 +71,7 @@ public class TodoService {
         List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int dayOfYear = localDate.get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR);
-        getAll().getBody().forEach((item) -> {
+        getAll().forEach((item) -> {
             if (item.getStartTime().get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR) == dayOfYear) {
                 todoLists.add(item);
             }
@@ -81,30 +80,29 @@ public class TodoService {
     }
 
     public List<TodoResponseDto> getNotDone() {
-        List<TodoResponseDto> todoLists = new ArrayList<>();
-        getAll().getBody().forEach((item) -> {
-            if (!item.isDone()) {
-                todoLists.add(item);
-            }
-        });
-        return todoLists;
+        return todoListDao.findByDoneIsFalse().stream().map(TodoListDtoConverter::convertTodoResponseDto).toList();
     }
 
     public ResponseEntity<Boolean> deleteTodo(int id) {
         todoListDao.deleteById(id);
-        return new ResponseEntity<>(!todoListDao.existsById(id),HttpStatus.OK);
+        return new ResponseEntity<>(!todoListDao.existsById(id), HttpStatus.OK);
     }
 
-    public ResponseEntity<TodoResponseDto> done(int id) {
-        List<TodoList> todoLists = todoListDao.findAll();
-        TodoResponseDto todoResponseDto = null;
-        for (TodoList item : todoLists) {
-            if (item.getId() == id) {
-                item.setDone(!item.isDone());
-                todoResponseDto = TodoListDtoConverter.convertTodoResponseDto(item);
-                todoListDao.save(item);
-            }
-        }
-        return new ResponseEntity<>(todoResponseDto, HttpStatus.OK);
+    public TodoResponseDto done(int id) {
+        TodoList todoList = todoListDao.findById(id).orElseThrow(UserNotFoundId::new);
+        todoList.setDone(!todoList.isDone());
+        todoListDao.save(todoList);
+        TodoResponseDto todoResponseDto = TodoListDtoConverter.convertTodoResponseDto(todoList);
+        return todoResponseDto;
+    }
+
+    public TodoUpdateResponseDto update(TodoList todoList) {
+        todoListDao.findById(todoList.getId()).orElseThrow(UserNotFoundId::new);
+        TodoList todoList1 = modelMapper.map(todoList, TodoList.class);
+        todoListDao.save(todoList1);
+        TodoUpdateResponseDto todoUpdateResponseDto = TodoListDtoConverter.convertTodoUpdateDto(todoList1);
+        return todoUpdateResponseDto;
     }
 }
+
+
