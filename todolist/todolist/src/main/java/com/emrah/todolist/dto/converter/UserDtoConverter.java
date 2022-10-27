@@ -1,6 +1,5 @@
 package com.emrah.todolist.dto.converter;
 
-import com.emrah.todolist.dto.UserRequestDto;
 import com.emrah.todolist.dto.UserResponseDto;
 import com.emrah.todolist.entity.User;
 
@@ -10,9 +9,5 @@ public class UserDtoConverter {
                 user.getName()
         );
     }
-    public static UserRequestDto convertUserRequestDto(User user) {
-        return new UserRequestDto(
-                user.getName()
-        );
-    }
+
 }

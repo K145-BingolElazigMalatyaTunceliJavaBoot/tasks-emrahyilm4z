@@ -1,4 +1,4 @@
-package com.emrah.todolist.dto;
+package com.emrah.todolist.dto.todo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

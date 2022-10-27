@@ -1,7 +1,8 @@
 package com.emrah.todolist.controller;
 
-import com.emrah.todolist.dto.TodoAddRequestDto;
-import com.emrah.todolist.dto.TodoResponseDto;
+import com.emrah.todolist.dto.todo.TodoAddRequestDto;
+import com.emrah.todolist.dto.todo.TodoResponseDto;
+import com.emrah.todolist.dto.todo.TodoUpdateResponseDto;
 import com.emrah.todolist.entity.TodoList;
 import com.emrah.todolist.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class TodoController {
 
     @PostMapping("/add")
     public ResponseEntity<TodoAddRequestDto> add(@RequestBody TodoList todoList) {
-        return new ResponseEntity<TodoAddRequestDto>(todoService.add(todoList).getBody(), HttpStatus.OK);
+        return new ResponseEntity<TodoAddRequestDto>(todoService.add(todoList), HttpStatus.OK);
     }
 
     @GetMapping("/week")
@@ -50,9 +51,15 @@ public class TodoController {
     public ResponseEntity<Boolean> delete(@RequestParam(name = "id") int id) {
         return todoService.deleteTodo(id);
     }
+
     @PostMapping("/done")
-    public ResponseEntity<TodoResponseDto> done(@RequestParam (name = "id") int id){
-        return new ResponseEntity<>(todoService.done(id).getBody(),HttpStatus.OK);
+    public ResponseEntity<TodoResponseDto> done(@RequestParam(name = "id") int id) {
+        return new ResponseEntity<TodoResponseDto>( todoService.done(id) , HttpStatus.OK);
+    }
+
+    @PutMapping("/updateTodo")
+    public ResponseEntity<TodoUpdateResponseDto> update(@RequestBody TodoList todoList) {
+        return new ResponseEntity<>(todoService.update(todoList), HttpStatus.OK);
     }
 
 }

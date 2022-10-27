@@ -1,10 +1,10 @@
 package com.emrah.todolist.service;
 
 import com.emrah.todolist.dataAccess.UserDao;
-import com.emrah.todolist.dto.UserRequestDto;
 import com.emrah.todolist.dto.UserResponseDto;
 import com.emrah.todolist.dto.converter.UserDtoConverter;
 import com.emrah.todolist.entity.User;
+import com.emrah.todolist.exceptions.UserNotFoundId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,25 +25,32 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    public ResponseEntity<UserRequestDto> add(User user) {
+    public ResponseEntity<UserResponseDto> add(User user) {
         user.setId(sequenceGeneratorService.getSequenceNumber(user.SEQUENCE_NAME));
         this.userDao.save(user);
-        UserRequestDto userResponseDto = UserDtoConverter.convertUserRequestDto(user);
-        return new ResponseEntity<UserRequestDto>(userResponseDto, HttpStatus.OK);
+        UserResponseDto userResponseDto = UserDtoConverter.convertUserResponseDto(user);
+        return new ResponseEntity<UserResponseDto>(userResponseDto, HttpStatus.OK);
     }
 
-    public ResponseEntity<List<UserResponseDto>> getAll() {
+    public List<UserResponseDto> getAll() {
         List<User> users = userDao.findAll();
         List<UserResponseDto> userResponseDtos = new ArrayList<>();
         for (User user : users) {
             userResponseDtos.add(UserDtoConverter.convertUserResponseDto(user));
         }
-
-        return new ResponseEntity<>(userResponseDtos, HttpStatus.OK);
+        return userResponseDtos;
     }
 
-    public ResponseEntity<Boolean> deleteUser(int id) {
+    public Boolean deleteUser(int id) {
         userDao.deleteById(id);
-        return new ResponseEntity<>(!userDao.existsById(id),HttpStatus.OK);
+        return !userDao.existsById(id);
+    }
+
+    public UserResponseDto update(int id, String name) {
+        User user = userDao.findById(id).orElseThrow(UserNotFoundId::new);
+        user.setName(name);
+        userDao.save(user);
+        UserResponseDto userResponseDto = UserDtoConverter.convertUserResponseDto(user);
+        return userResponseDto;
     }
 }
