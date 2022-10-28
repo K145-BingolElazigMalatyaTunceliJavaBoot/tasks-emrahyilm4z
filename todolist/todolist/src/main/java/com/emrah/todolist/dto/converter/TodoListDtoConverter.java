@@ -25,7 +25,6 @@ public class TodoListDtoConverter {
                 from.isDone()
         );
     }
-
     public static TodoUpdateResponseDto convertTodoUpdateDto(TodoList from) {
         return new TodoUpdateResponseDto(
                 from.getDescription(),

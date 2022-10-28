@@ -25,20 +25,15 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    public ResponseEntity<UserResponseDto> add(User user) {
+    public UserResponseDto add(User user) {
         user.setId(sequenceGeneratorService.getSequenceNumber(user.SEQUENCE_NAME));
         this.userDao.save(user);
         UserResponseDto userResponseDto = UserDtoConverter.convertUserResponseDto(user);
-        return new ResponseEntity<UserResponseDto>(userResponseDto, HttpStatus.OK);
+        return userResponseDto;
     }
 
     public List<UserResponseDto> getAll() {
-        List<User> users = userDao.findAll();
-        List<UserResponseDto> userResponseDtos = new ArrayList<>();
-        for (User user : users) {
-            userResponseDtos.add(UserDtoConverter.convertUserResponseDto(user));
-        }
-        return userResponseDtos;
+        return userDao.findAll().stream().map(UserDtoConverter::convertUserResponseDto).toList();
     }
 
     public Boolean deleteUser(int id) {

@@ -9,13 +9,11 @@ import com.emrah.todolist.entity.TodoList;
 import com.emrah.todolist.exceptions.UserNotFoundId;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
@@ -44,48 +42,30 @@ public class TodoService {
     }
 
     public List<TodoResponseDto> getWeek() {
-        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int weekOfYear = localDate.get(ChronoField.ALIGNED_WEEK_OF_YEAR);
-        getAll().forEach((item) -> {
-            if (item.getStartTime().get(ChronoField.ALIGNED_WEEK_OF_YEAR) == weekOfYear) {
-                todoLists.add(item);
-            }
-        });
-        return todoLists;
+        return getAll().stream().filter((item) -> item.getStartTime().get(ChronoField.ALIGNED_WEEK_OF_YEAR) == weekOfYear).toList();
     }
 
     public List<TodoResponseDto> getMonth() {
-        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int monthOfYear = localDate.get(ChronoField.MONTH_OF_YEAR);
-        getAll().forEach((item) -> {
-            if (item.getStartTime().get(ChronoField.MONTH_OF_YEAR) == monthOfYear) {
-                todoLists.add(item);
-            }
-        });
-        return todoLists;
+        return  getAll().stream().filter((item)-> item.getStartTime().get(ChronoField.MONTH_OF_YEAR) == monthOfYear).toList();
     }
 
     public List<TodoResponseDto> getDay() {
-        List<TodoResponseDto> todoLists = new ArrayList<>();
         LocalDate localDate = LocalDate.now();
         int dayOfYear = localDate.get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR);
-        getAll().forEach((item) -> {
-            if (item.getStartTime().get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR) == dayOfYear) {
-                todoLists.add(item);
-            }
-        });
-        return todoLists;
+        return getAll().stream().filter((item) -> item.getStartTime().get(ChronoField.ALIGNED_DAY_OF_WEEK_IN_YEAR) == dayOfYear).toList();
     }
 
     public List<TodoResponseDto> getNotDone() {
         return todoListDao.findByDoneIsFalse().stream().map(TodoListDtoConverter::convertTodoResponseDto).toList();
     }
 
-    public ResponseEntity<Boolean> deleteTodo(int id) {
+    public Boolean deleteTodo(int id) {
         todoListDao.deleteById(id);
-        return new ResponseEntity<>(!todoListDao.existsById(id), HttpStatus.OK);
+        return !todoListDao.existsById(id);
     }
 
     public TodoResponseDto done(int id) {

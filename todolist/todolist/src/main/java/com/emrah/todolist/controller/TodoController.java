@@ -48,7 +48,7 @@ public class TodoController {
     }
 
     @DeleteMapping("/deleteTodo")
-    public ResponseEntity<Boolean> delete(@RequestParam(name = "id") int id) {
+    public Boolean delete(@RequestParam(name = "id") int id) {
         return todoService.deleteTodo(id);
     }
 

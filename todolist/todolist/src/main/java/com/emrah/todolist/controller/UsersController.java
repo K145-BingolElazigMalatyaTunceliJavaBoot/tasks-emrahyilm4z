@@ -27,7 +27,7 @@ public class UsersController {
 
     @PostMapping("/add")
     public ResponseEntity<UserResponseDto> add(@RequestBody User user) {
-        return new ResponseEntity<UserResponseDto>(userService.add(user).getBody(), HttpStatus.OK);
+        return new ResponseEntity<UserResponseDto>(userService.add(user), HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteUser")

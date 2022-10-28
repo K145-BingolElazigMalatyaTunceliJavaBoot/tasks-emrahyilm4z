@@ -4,35 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="Complate fourth week with issues">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid11808.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid16288.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid17740.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid3716.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid5160.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid6920.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/todo/TodoUpdateResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/exceptions/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/exceptions/UserNotFoundId.java" afterDir="false" />
+    <list default="true" id="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" name="Changes" comment="Complate fifth week">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/TodolistApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/TodolistApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dataAccess/TodoListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dataAccess/TodoListDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoAddRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/todo/TodoAddRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/TodoResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/todo/TodoResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/UserRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/UserDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/UserDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/DbSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/entity/DbSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/UserService.java" afterDir="false" />
-    </list>
-    <list id="90fbfa18-61b6-408b-aa72-b24ab5a70511" name="Changes by talha" comment="">
-      <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,35 +28,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/dto/converter/TodoListDtoConverter.java">
-      <ranges>
-        <range start1="3" end1="5" start2="3" end2="6" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="17" end1="17" start2="18" end2="19" changelist="90fbfa18-61b6-408b-aa72-b24ab5a70511" />
-        <range start1="25" end1="25" start2="27" end2="36" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/todolist/todolist/src/main/java/com/emrah/todolist/service/TodoService.java">
-      <ranges>
-        <range start1="3" end1="5" start2="3" end2="5" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="6" end1="6" start2="6" end2="7" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="7" end1="7" start2="8" end2="10" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="16" end1="16" start2="19" end2="20" changelist="90fbfa18-61b6-408b-aa72-b24ab5a70511" />
-        <range start1="19" end1="20" start2="23" end2="24" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="21" end1="22" start2="25" end2="28" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="29" end1="37" start2="35" end2="37" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="39" end1="41" start2="39" end2="41" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="43" end1="44" start2="43" end2="44" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="50" end1="51" start2="50" end2="51" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="62" end1="63" start2="62" end2="63" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="74" end1="75" start2="74" end2="75" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="83" end1="90" start2="83" end2="84" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="94" end1="95" start2="88" end2="89" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="97" end1="108" start2="91" end2="97" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-        <range start1="109" end1="110" start2="98" end2="109" changelist="47bd0fde-84b1-4ae6-be2e-e9eddd7b5ee5" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -176,7 +120,8 @@
       <workItem from="1666874753585" duration="38000" />
       <workItem from="1666891639311" duration="4002000" />
       <workItem from="1666897071851" duration="539000" />
-      <workItem from="1666897628122" duration="6057000" />
+      <workItem from="1666897628122" duration="6863000" />
+      <workItem from="1666914573219" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="Start fourth week">
       <created>1666047001705</created>
@@ -213,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666382341436</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Complate fifth week">
+      <created>1666903752996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666903752996</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Complate fifth week">
+      <created>1666903934899</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666903934899</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +198,7 @@
     <MESSAGE value="Start fourth week" />
     <MESSAGE value="Complate fourth week" />
     <MESSAGE value="Complate fourth week with issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complate fourth week with issues" />
+    <MESSAGE value="Complate fifth week" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complate fifth week" />
   </component>
 </project>
